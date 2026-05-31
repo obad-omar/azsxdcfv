@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ابحث عن الهدايا الموسيقية المثالية لأحبائك، من قسائم الشراء الإلكترونية الفاخرة إلى الإكسسوارات المهمة وحقائب الآلات المخصصة.">
+    <title>الهدايا | موسيقاتي - MOSIQATI</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="logo-text">موسيقاتي</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu-list">
+                    <li><a href="index.html" class="nav-link" id="link-home">الرئيسية</a></li>
+                    <li><a href="store.html" class="nav-link" id="link-store">المتجر</a></li>
+                    <li><a href="gifts.html" class="nav-link active" id="link-gifts">الهدايا</a></li>
+                    <li><a href="offers.html" class="nav-link" id="link-offers">العروض الخاصة</a></li>
+                    <li><a href="contact.html" class="nav-link" id="link-contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Gift Page Header -->
+        <section class="section-padding" style="padding-bottom: 20px;" id="gifts-intro">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">الهدايا الموسيقية</span>
+                    <h1 class="section-title" id="gifts-heading">أهدِ نغماً لمن تحب</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Vouchers / Gift Cards Section -->
+        <section style="padding-bottom: 60px;" id="gift-vouchers">
+            <div class="container">
+                <div class="section-title-wrapper" style="margin-bottom: 40px; text-align: right;">
+                    <h2 style="font-size: 1.8rem;" id="vouchers-title">بطاقات الهدايا الإلكترونية</h2>
+                    <p style="color: var(--text-gray); margin-top: 5px;">قسائم شراء رقمية فاخرة تُرسل عبر البريد الإلكتروني مع رسالة تهنئة مخصصة.</p>
+                </div>
+                
+                <div class="grid-3" id="vouchers-grid">
+                    
+                    <!-- Voucher 1 -->
+                    <div class="gift-card-voucher" id="voucher-silver">
+                        <img src="images/gift_card.png" alt="بطاقة هدية فضية" class="gift-card-img">
+                        <h3 class="card-title">قسيمة شراء فضية</h3>
+                        <p class="card-desc" style="font-size: 0.9rem;">هدية مثالية لشراء الإكسسوارات والأوتار والكتب التعليمية للمبتدئين.</p>
+                        <div class="gift-value">25.00</div>
+                        <button class="btn btn-primary" style="width: 100%;" id="btn-buy-silver">شراء القسيمة</button>
+                    </div>
+
+                    <!-- Voucher 2 -->
+                    <div class="gift-card-voucher" style="border-color: var(--primary-gold); box-shadow: 0 0 15px rgba(212,175,55,0.1);" id="voucher-gold">
+                        <img src="images/gift_card.png" alt="بطاقة هدية ذهبية" class="gift-card-img">
+                        <h3 class="card-title" style="color: var(--primary-gold);">قسيمة شراء ذهبية</h3>
+                        <p class="card-desc" style="font-size: 0.9rem;">تتيح خيارات أوسع لاقتناء الآلات الصغيرة كالدربكة، الجيتار الصغير أو مايكروفونات البث.</p>
+                        <div class="gift-value" style="color: var(--primary-gold);">50.00</div>
+                        <button class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, var(--primary-gold), #b3922d);" id="btn-buy-gold">شراء القسيمة</button>
+                    </div>
+
+                    <!-- Voucher 3 -->
+                    <div class="gift-card-voucher" style="border-color: var(--accent-cyan); box-shadow: 0 0 15px rgba(0,229,255,0.1);" id="voucher-platinum">
+                        <img src="images/gift_card.png" alt="بطاقة هدية بلاتينية" class="gift-card-img">
+                        <h3 class="card-title" style="color: var(--accent-cyan);">قسيمة شراء بلاتينية</h3>
+                        <p class="card-desc" style="font-size: 0.9rem;">هدية النخبة التي تمكن متلقيها من الإسهام في اقتناء عود فاخر أو جيتار احترافي.</p>
+                        <div class="gift-value" style="color: var(--accent-cyan);">100.00</div>
+                        <button class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, var(--accent-cyan), #00b8cc); color: #000;" id="btn-buy-platinum">شراء القسيمة</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories & Gift Items -->
+        <section class="section-padding" style="background: rgba(255,255,255,0.01);" id="gift-accessories">
+            <div class="container">
+                <div class="section-title-wrapper" style="margin-bottom: 50px;">
+                    <span class="section-subtitle">إكسسوارات مميزة</span>
+                    <h2 class="section-title" id="accessories-heading">هدايا وإضافات موسيقية ملهمة</h2>
+                </div>
+
+                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));" id="accessories-grid">
+                    
+                    <!-- Item 1 -->
+                    <div class="card" style="padding: 25px;" id="item-tuner">
+                        <div style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 15px;"><i class="fa-solid fa-compact-disc"></i></div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px;">جهاز دوزان أوتار رقمي</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">جهاز دوزان ذكي يتم تثبيته على رأس العود أو الجيتار لضمان ضبط النغمات بدقة عالية وسهولة فائقة.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-family: var(--font-english); font-weight: 700; color: var(--accent-cyan);">15.00 د.أ</span>
+                            <a href="#" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;" id="buy-item-tuner">شراء</a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="card" style="padding: 25px;" id="item-bag">
+                        <div style="font-size: 2.2rem; color: var(--primary-gold); margin-bottom: 15px;"><i class="fa-solid fa-suitcase"></i></div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px;">حقيبة عود مبطنة فاخرة</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">حقيبة ظهر مبطنة بإسفنج عالي الكثافة لحماية العود من الصدمات وتغير درجات الحرارة أثناء التنقل.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-family: var(--font-english); font-weight: 700; color: var(--primary-gold);">45.00 د.أ</span>
+                            <a href="#" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;" id="buy-item-bag">شراء</a>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="card" style="padding: 25px;" id="item-stand">
+                        <div style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 15px;"><i class="fa-solid fa-lines-leaning"></i></div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px;">حامل نوتة موسيقية معدني</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">حامل متين وقابل لضبط الارتفاع والزاوية، مثالي لعازفي الكمان، الجيتار والنوتات الورقية.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-family: var(--font-english); font-weight: 700; color: var(--accent-cyan);">20.00 د.أ</span>
+                            <a href="#" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;" id="buy-item-stand">شراء</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Gift recommendation Wizard (JS Quiz) -->
+        <section class="section-padding" id="gift-recommendation-wizard">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">المستشار الذكي</span>
+                    <h2 class="section-title" id="wizard-heading">ساعدني في اختيار هدية</h2>
+                </div>
+                
+                <div class="wizard-box" id="gift-wizard">
+                    <div class="wizard-steps">
+                        <div class="step-node active" id="step-node-1">1</div>
+                        <div class="step-node" id="step-node-2">2</div>
+                        <div class="step-node" id="step-node-3">3</div>
+                    </div>
+                    <h3 class="wizard-question" id="wizard-question-text">سؤال المستشار...</h3>
+                    <div class="wizard-options" id="wizard-options-container">
+                        <!-- Options injected by app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col" id="footer-col-about">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                    <span class="logo-text">موسيقاتي</span>
+                </div>
+                <p class="footer-logo-desc">متجر رقمي متخصص في الآلات الموسيقية وهندسة الصوت في الأردن، نسعى لتوفير أرقى الآلات وأفضل جودة صوتية لعشاق الموسيقى.</p>
+                <div class="social-grid">
+                    <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube" id="footer-social-yt"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram" id="footer-social-ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook" id="footer-social-fb"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-btn tiktok" aria-label="TikTok" id="footer-social-tt"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col" id="footer-col-links">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" id="footer-link-home">الصفحة الرئيسية</a></li>
+                    <li><a href="store.html" id="footer-link-store">متجر الآلات</a></li>
+                    <li><a href="gifts.html" id="footer-link-gifts">قسم الهدايا الموسيقية</a></li>
+                    <li><a href="offers.html" id="footer-link-offers">العروض والتخفيضات</a></li>
+                    <li><a href="contact.html" id="footer-link-contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" id="footer-col-contact">
+                <h3>معلومات الاتصال</h3>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item" id="footer-contact-addr">
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>شارع الرينبو، عمان، الأردن</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-ph">
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <span style="font-family: var(--font-english);">+962 7 9000 0000</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-em">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span style="font-family: var(--font-english);">support@mosiqati.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col" id="footer-col-news">
+                <h3>النشرة الإخبارية</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">اشترك لتصلك آخر أخبار الآلات الجديدة والعروض الحصرية.</p>
+                <form class="newsletter-form" id="newsletter-form-action">
+                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input" required id="newsletter-email-input">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px;" id="newsletter-btn-submit">اشتراك</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p id="copyright-text">جميع الحقوق محفوظة © <span style="font-family: var(--font-english);">2026</span> لموقع موسيقاتي (MOSIQATI)</p>
+            <p style="font-size: 0.75rem; color: #555;" id="btec-disclaimer">مشروع ويب مطور وفقاً لمعايير Pearson BTEC International (المستوى الثاني - الوحدة 7)</p>
+        </div>
+    </footer>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>

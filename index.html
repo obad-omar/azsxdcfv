@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مرحباً بكم في متجر موسيقاتي الرقمي - الوجهة الأولى لبيع الآلات الموسيقية الفاخرة ومعدات الصوت في الأردن.">
+    <title>الرئيسية | موسيقاتي - MOSIQATI</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="logo-text">موسيقاتي</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu-list">
+                    <li><a href="index.html" class="nav-link active" id="link-home">الرئيسية</a></li>
+                    <li><a href="store.html" class="nav-link" id="link-store">المتجر</a></li>
+                    <li><a href="gifts.html" class="nav-link" id="link-gifts">الهدايا</a></li>
+                    <li><a href="offers.html" class="nav-link" id="link-offers">العروض الخاصة</a></li>
+                    <li><a href="contact.html" class="nav-link" id="link-contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tagline">أكبر تشكيلة آلات موسيقية في الأردن</span>
+                    <h1 class="hero-title">اكتشف شغفك الموسيقي مع <span>موسيقاتي</span></h1>
+                    <p class="hero-description">متجر رقمي فاخر يوفر أفضل الآلات الشرقية والغربية بالإضافة إلى معدات الاستوديو الاحترافية لتنقل معزوفتك إلى مستوى عالمي.</p>
+                    <div class="btn-group">
+                        <a href="store.html" class="btn btn-primary" id="hero-btn-store">تسوق الآن</a>
+                        <a href="contact.html" class="btn btn-secondary" id="hero-btn-contact">استشر خبيراً</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome & About Highlights -->
+        <section class="section-padding" id="home-welcome">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">من نحن</span>
+                    <h2 class="section-title" id="welcome-heading">نبض النغم في قلب عمان</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="card" id="card-quality">
+                        <div class="card-icon"><i class="fa-solid fa-guitar"></i></div>
+                        <h3 class="card-title">جودة أصلية ومضمونة</h3>
+                        <p class="card-desc">نوفر آلات من كبرى الشركات العالمية والورش العريقة المصممة يدوياً لضمان نقاء الصوت ومتانة الصنع.</p>
+                    </div>
+                    <div class="card" id="card-expert">
+                        <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
+                        <h3 class="card-title">دعم فني واستشارات</h3>
+                        <p class="card-desc">لست متأكداً مما تحتاجه؟ خبراؤنا الموسيقيون في الأردن جاهزون لمساعدتك في اختيار الآلة والمعدات المناسبة.</p>
+                    </div>
+                    <div class="card" id="card-delivery">
+                        <div class="card-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h3 class="card-title">توصيل آمن وسريع</h3>
+                        <p class="card-desc">نقوم بتغليف الآلات بطرق احترافية مضادة للصدمات وتوصيلها مباشرة إلى باب منزلك في جميع محافظات المملكة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Category Highlights -->
+        <section class="section-padding" style="background: rgba(255,255,255,0.01);" id="home-categories">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">تصنيفاتنا</span>
+                    <h2 class="section-title" id="categories-heading">استكشف العوالم الموسيقية</h2>
+                </div>
+                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                    
+                    <!-- Category 1 -->
+                    <div class="category-card" id="cat-oriental">
+                        <div class="category-bg" style="background-image: url('images/premium_oud.png');"></div>
+                        <div class="category-content">
+                            <h3 class="category-title">الآلات الشرقية</h3>
+                            <a href="store.html" class="category-link">عرض المجموعة <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="category-card" id="cat-guitars">
+                        <div class="category-bg" style="background-image: url('images/electric_guitar.png');"></div>
+                        <div class="category-content">
+                            <h3 class="category-title">الجيتارات والوتريات</h3>
+                            <a href="store.html" class="category-link">عرض المجموعة <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="category-card" id="cat-pianos">
+                        <div class="category-bg" style="background-image: url('images/grand_piano.png');"></div>
+                        <div class="category-content">
+                            <h3 class="category-title">آلات الكيبورد</h3>
+                            <a href="store.html" class="category-link">عرض المجموعة <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand New Promotional Banner Section -->
+        <section class="section-padding" style="position: relative; overflow: hidden;" id="home-promo">
+            <div class="container">
+                <div class="card" style="background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(0,229,255,0.15)); border: 1px solid var(--primary-gold); padding: 60px 40px; text-align: center; border-radius: 30px;" id="promo-banner-container">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 15px; color: var(--text-white);" id="promo-banner-title">احتفالية انطلاق متجر موسيقاتي الرقمي الجديد!</h2>
+                    <p style="color: var(--text-gray); font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px auto; line-height: 1.8;" id="promo-banner-desc">
+                        يسعدنا تقديم خصم خاص يصل إلى <span style="color: var(--accent-cyan); font-weight: 700; font-family: var(--font-english);">20%</span> على جميع معدات الاستوديو، بالإضافة إلى عروض حصرية على الأعواد المصممة يدوياً.
+                    </p>
+                    <a href="offers.html" class="btn btn-primary" id="promo-banner-btn">اكتشف العروض الحصرية</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col" id="footer-col-about">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                    <span class="logo-text">موسيقاتي</span>
+                </div>
+                <p class="footer-logo-desc">متجر رقمي متخصص في الآلات الموسيقية وهندسة الصوت في الأردن، نسعى لتوفير أرقى الآلات وأفضل جودة صوتية لعشاق الموسيقى.</p>
+                <div class="social-grid">
+                    <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube" id="footer-social-yt"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram" id="footer-social-ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook" id="footer-social-fb"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-btn tiktok" aria-label="TikTok" id="footer-social-tt"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col" id="footer-col-links">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" id="footer-link-home">الصفحة الرئيسية</a></li>
+                    <li><a href="store.html" id="footer-link-store">متجر الآلات</a></li>
+                    <li><a href="gifts.html" id="footer-link-gifts">قسم الهدايا الموسيقية</a></li>
+                    <li><a href="offers.html" id="footer-link-offers">العروض والتخفيضات</a></li>
+                    <li><a href="contact.html" id="footer-link-contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" id="footer-col-contact">
+                <h3>معلومات الاتصال</h3>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item" id="footer-contact-addr">
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>شارع الرينبو، عمان، الأردن</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-ph">
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <span style="font-family: var(--font-english);">+962 7 9000 0000</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-em">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span style="font-family: var(--font-english);">support@mosiqati.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col" id="footer-col-news">
+                <h3>النشرة الإخبارية</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">اشترك لتصلك آخر أخبار الآلات الجديدة والعروض الحصرية.</p>
+                <form class="newsletter-form" id="newsletter-form-action">
+                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input" required id="newsletter-email-input">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px;" id="newsletter-btn-submit">اشتراك</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p id="copyright-text">جميع الحقوق محفوظة © <span style="font-family: var(--font-english);">2026</span> لموقع موسيقاتي (MOSIQATI)</p>
+            <p style="font-size: 0.75rem; color: #555;" id="btec-disclaimer">مشروع ويب مطور وفقاً لمعايير Pearson BTEC International (المستوى الثاني - الوحدة 7)</p>
+        </div>
+    </footer>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>

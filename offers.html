@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اكتشف أقوى الخصومات والتخفيضات الحصرية في متجر موسيقاتي، بالإضافة إلى الباقات الموسيقية المتكاملة للطلاب والمحترفين.">
+    <title>العروض الخاصة | موسيقاتي - MOSIQATI</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="logo-text">موسيقاتي</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu-list">
+                    <li><a href="index.html" class="nav-link" id="link-home">الرئيسية</a></li>
+                    <li><a href="store.html" class="nav-link" id="link-store">المتجر</a></li>
+                    <li><a href="gifts.html" class="nav-link" id="link-gifts">الهدايا</a></li>
+                    <li><a href="offers.html" class="nav-link active" id="link-offers">العروض الخاصة</a></li>
+                    <li><a href="contact.html" class="nav-link" id="link-contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Offers Intro -->
+        <section class="section-padding" style="padding-bottom: 20px;" id="offers-intro">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">خصومات حصرية</span>
+                    <h1 class="section-title" id="offers-heading">عروض النغم الحصرية</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Countdown Timer Section -->
+        <section style="padding-bottom: 40px;" id="offers-timer">
+            <div class="container">
+                <div class="countdown-container" id="countdown-banner">
+                    <h2 style="font-size: 1.5rem; color: var(--text-white);" id="countdown-title">ينتهي هذا العرض الحصري خلال:</h2>
+                    <div class="countdown-timer" id="countdown-timer-digits">
+                        <div class="timer-segment">
+                            <span class="timer-val" id="seconds">00</span>
+                            <span class="timer-lbl">ثانية</span>
+                        </div>
+                        <div class="timer-segment">
+                            <span class="timer-val" id="minutes">00</span>
+                            <span class="timer-lbl">دقيقة</span>
+                        </div>
+                        <div class="timer-segment">
+                            <span class="timer-val" id="hours">00</span>
+                            <span class="timer-lbl">ساعة</span>
+                        </div>
+                        <div class="timer-segment">
+                            <span class="timer-val" id="days">00</span>
+                            <span class="timer-lbl">يوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Bundles Grid -->
+        <section class="section-padding" style="background: rgba(255,255,255,0.01);" id="offers-bundles">
+            <div class="container">
+                <div class="section-title-wrapper" style="margin-bottom: 50px;">
+                    <span class="section-subtitle">الباقات الموسيقية</span>
+                    <h2 class="section-title" id="bundles-heading">باقات متكاملة توفر أكثر</h2>
+                </div>
+
+                <div class="grid-3" id="bundles-grid">
+
+                    <!-- Bundle 1 -->
+                    <div class="product-card" id="bundle-oud">
+                        <div class="product-img-wrapper">
+                            <img src="images/premium_oud.png" alt="باقة العود للمبتدئين" class="product-img">
+                            <span class="product-tag" style="background: var(--primary-gold);">توفير 60 د.أ</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" style="color: var(--primary-gold);">العزف الشرقي</span>
+                            <h3 class="product-title">باقة العود التعليمية المتكاملة</h3>
+                            <p class="product-desc">تتضمن: عوداً كلاسيكياً فاخراً + حقيبة مبطنة مقاومة للمياه + طقم أوتار إضافي + كتاب تعليم العزف للمبتدئين + ريش عزف ملونة.</p>
+                            <div class="product-footer">
+                                <div>
+                                    <span style="text-decoration: line-through; color: var(--text-gray); font-size: 0.95rem; font-family: var(--font-english); display: block; margin-bottom: 2px;">430.00 د.أ</span>
+                                    <span class="product-price" style="color: var(--primary-gold);">370.00</span>
+                                </div>
+                                <button class="btn-cart" style="background: var(--primary-gold); color: #000;" aria-label="Add bundle to cart" id="add-bundle-oud"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bundle 2 -->
+                    <div class="product-card" id="bundle-studio">
+                        <div class="product-img-wrapper">
+                            <img src="images/studio_mic.png" alt="باقة استوديو منزلي" class="product-img">
+                            <span class="product-tag" style="background: var(--accent-cyan);">توفير 50 د.أ</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category" style="color: var(--accent-cyan);">هندسة الصوت</span>
+                            <h3 class="product-title">باقة الاستوديو المنزلي للمبدعين</h3>
+                            <p class="product-desc">تتضمن: مايكروفون برو-كاست مكثف + حامل مكتبي معدني + فلتر تنقية الصوت (Pop filter) + كابل توصيل احترافي + سماعات استوديو.</p>
+                            <div class="product-footer">
+                                <div>
+                                    <span style="text-decoration: line-through; color: var(--text-gray); font-size: 0.95rem; font-family: var(--font-english); display: block; margin-bottom: 2px;">310.00 د.أ</span>
+                                    <span class="product-price" style="color: var(--accent-cyan);">260.00</span>
+                                </div>
+                                <button class="btn-cart" style="background: var(--accent-cyan); color: #000;" aria-label="Add bundle to cart" id="add-bundle-studio"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bundle 3 -->
+                    <div class="product-card" id="bundle-guitar">
+                        <div class="product-img-wrapper">
+                            <img src="images/electric_guitar.png" alt="باقة جيتار متكاملة" class="product-img">
+                            <span class="product-tag" style="background: #e6683c;">توفير 40 د.أ</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">العزف الغربي</span>
+                            <h3 class="product-title">باقة الجيتار الحديث للمحترفين</h3>
+                            <p class="product-desc">تتضمن: جيتار نيون برو الكهربائي + حقيبة ظهر خفيفة + حزام جلدي مبطن + جهاز دوزان رقمي + كود وصول لمنصة تعليم العزف.</p>
+                            <div class="product-footer">
+                                <div>
+                                    <span style="text-decoration: line-through; color: var(--text-gray); font-size: 0.95rem; font-family: var(--font-english); display: block; margin-bottom: 2px;">320.00 د.أ</span>
+                                    <span class="product-price">280.00</span>
+                                </div>
+                                <button class="btn-cart" aria-label="Add bundle to cart" id="add-bundle-guitar"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Scratch Card / Interactive Discount Code -->
+        <section class="section-padding" id="offers-interactive-promo">
+            <div class="container">
+                <div class="section-title-wrapper" style="margin-bottom: 30px;">
+                    <span class="section-subtitle">المفاجأة السارة</span>
+                    <h2 class="section-title" id="mystery-heading">امسح الكرت لكشف هديتك</h2>
+                    <p style="color: var(--text-gray); margin-top: 10px;">اضغط على الكرت أدناه لتقشير الغطاء الفضي والحصول على كود خصم إضافي فوري!</p>
+                </div>
+
+                <div class="scratch-card" id="interactive-scratch-card">
+                    <div class="scratch-overlay" id="scratch-cover">
+                        <span class="scratch-overlay-text">انقر هنا للمسح <i class="fa-solid fa-hand-pointer"></i></span>
+                    </div>
+                    <div class="scratch-content" id="scratch-inside">
+                        <h3 style="color: var(--text-white); font-size: 1.4rem;">تهانينا! لقد حصلت على خصم 10%</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 5px;">استخدم هذا الرمز الترويجي عند إتمام الطلب:</p>
+                        <div class="promo-code-box">MOSIQATI10</div>
+                        <p style="font-size: 0.78rem; color: var(--primary-gold); margin-top: 10px;">*الرمز صالح للاستخدام مرة واحدة وينتهي بانتهاء المؤقت أعلاه.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col" id="footer-col-about">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                    <span class="logo-text">موسيقاتي</span>
+                </div>
+                <p class="footer-logo-desc">متجر رقمي متخصص في الآلات الموسيقية وهندسة الصوت في الأردن، نسعى لتوفير أرقى الآلات وأفضل جودة صوتية لعشاق الموسيقى.</p>
+                <div class="social-grid">
+                    <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube" id="footer-social-yt"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram" id="footer-social-ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook" id="footer-social-fb"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-btn tiktok" aria-label="TikTok" id="footer-social-tt"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col" id="footer-col-links">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" id="footer-link-home">الصفحة الرئيسية</a></li>
+                    <li><a href="store.html" id="footer-link-store">متجر الآلات</a></li>
+                    <li><a href="gifts.html" id="footer-link-gifts">قسم الهدايا الموسيقية</a></li>
+                    <li><a href="offers.html" id="footer-link-offers">العروض والتخفيضات</a></li>
+                    <li><a href="contact.html" id="footer-link-contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" id="footer-col-contact">
+                <h3>معلومات الاتصال</h3>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item" id="footer-contact-addr">
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>شارع الرينبو، عمان، الأردن</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-ph">
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <span style="font-family: var(--font-english);">+962 7 9000 0000</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-em">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span style="font-family: var(--font-english);">support@mosiqati.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col" id="footer-col-news">
+                <h3>النشرة الإخبارية</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">اشترك لتصلك آخر أخبار الآلات الجديدة والعروض الحصرية.</p>
+                <form class="newsletter-form" id="newsletter-form-action">
+                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input" required id="newsletter-email-input">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px;" id="newsletter-btn-submit">اشتراك</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p id="copyright-text">جميع الحقوق محفوظة © <span style="font-family: var(--font-english);">2026</span> لموقع موسيقاتي (MOSIQATI)</p>
+            <p style="font-size: 0.75rem; color: #555;" id="btec-disclaimer">مشروع ويب مطور وفقاً لمعايير Pearson BTEC International (المستوى الثاني - الوحدة 7)</p>
+        </div>
+    </footer>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>

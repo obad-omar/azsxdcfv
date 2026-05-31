@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تصفح تشكيلة متجر موسيقاتي المميزة من الأعواد الفاخرة، الجيتارات الحديثة، البيانو الكلاسيكي، الدربكة التراثية ومعدات هندسة الصوت المتقدمة.">
+    <title>المتجر | موسيقاتي - MOSIQATI</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="logo-text">موسيقاتي</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu-list">
+                    <li><a href="index.html" class="nav-link" id="link-home">الرئيسية</a></li>
+                    <li><a href="store.html" class="nav-link active" id="link-store">المتجر</a></li>
+                    <li><a href="gifts.html" class="nav-link" id="link-gifts">الهدايا</a></li>
+                    <li><a href="offers.html" class="nav-link" id="link-offers">العروض الخاصة</a></li>
+                    <li><a href="contact.html" class="nav-link" id="link-contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="nav-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Catalog Intro Section -->
+        <section class="section-padding" style="padding-bottom: 20px;" id="store-intro">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">كتالوج الآلات</span>
+                    <h1 class="section-title" id="store-heading">صوتك، أسلوبك، اختيارك</h1>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="store-controls" id="store-filters-container">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">الكل</button>
+                    <button class="filter-btn" data-filter="strings" id="filter-strings">آلات وترية</button>
+                    <button class="filter-btn" data-filter="keyboards" id="filter-keyboards">آلات الكيبورد</button>
+                    <button class="filter-btn" data-filter="percussion" id="filter-percussion">آلات إيقاعية</button>
+                    <button class="filter-btn" data-filter="studio" id="filter-studio">هندسة الصوت</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section style="padding-bottom: 80px;" id="store-products">
+            <div class="container">
+                <div class="product-grid" id="instruments-grid">
+
+                    <!-- Product 1: Oud -->
+                    <div class="product-card" data-category="strings" id="prod-oud">
+                        <div class="product-img-wrapper">
+                            <img src="images/premium_oud.png" alt="عود شرقي فاخر" class="product-img">
+                            <span class="product-tag">الأكثر مبيعاً</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">آلات وترية</span>
+                            <h3 class="product-title">عود شرقي كلاسيكي فاخر</h3>
+                            <p class="product-desc">عود احترافي مصنوع يدوياً من خشب الماهوجني والجوز التركي الفاخر، يتميز برنين عميق ونقاوة صوتية عالية مناسبة للمسارح.</p>
+                            <div class="product-footer">
+                                <span class="product-price">350.00</span>
+                                <button class="btn-cart" aria-label="Add to cart" id="add-cart-oud"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Electric Guitar -->
+                    <div class="product-card" data-category="strings" id="prod-guitar">
+                        <div class="product-img-wrapper">
+                            <img src="images/electric_guitar.png" alt="جيتار كهربائي احترافي" class="product-img">
+                            <span class="product-tag">جديد</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">آلات وترية</span>
+                            <h3 class="product-title">جيتار كهربائي نيون برو</h3>
+                            <p class="product-desc">جيتار حديث بهيكل مريح، بيك آب عالي الكفاءة يدعم العزف المنفرد (Solo) وأنماط الروك والبلوز بوضوح صوتي مذهل.</p>
+                            <div class="product-footer">
+                                <span class="product-price">280.00</span>
+                                <button class="btn-cart" aria-label="Add to cart" id="add-cart-guitar"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Grand Piano -->
+                    <div class="product-card" data-category="keyboards" id="prod-piano">
+                        <div class="product-img-wrapper">
+                            <img src="images/grand_piano.png" alt="بيانو كلاسيكي فاخر" class="product-img">
+                            <span class="product-tag">فاخر</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">آلات الكيبورد</span>
+                            <h3 class="product-title">بيانو كنسرت كلاسيك الأسود</h3>
+                            <p class="product-desc">بيانو ملكي متكامل ذو أوتار وهيكل داخلي مصنوع بدقة متناهية، يمنحك ملمساً كلاسيكياً ورنيناً غنياً يتلاءم مع الصالات الكبرى.</p>
+                            <div class="product-footer">
+                                <span class="product-price">2500.00</span>
+                                <button class="btn-cart" aria-label="Add to cart" id="add-cart-piano"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Darbuka -->
+                    <div class="product-card" data-category="percussion" id="prod-darbuka">
+                        <div class="product-img-wrapper">
+                            <img src="images/darbuka.png" alt="دربكة احترافية صدفية" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">آلات إيقاعية</span>
+                            <h3 class="product-title">دربكة شرقية صدفية مميزة</h3>
+                            <p class="product-desc">دربكة ألومنيوم احترافية مطعمة بنقوش صدفية فاخرة يدوية الصنع من الورش السورية، توفر رنيناً حاداً (Tak) ونغمة دافئة (Dum).</p>
+                            <div class="product-footer">
+                                <span class="product-price">120.00</span>
+                                <button class="btn-cart" aria-label="Add to cart" id="add-cart-darbuka"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: Studio Microphone -->
+                    <div class="product-card" data-category="studio" id="prod-mic">
+                        <div class="product-img-wrapper">
+                            <img src="images/studio_mic.png" alt="مايكروفون استوديو احترافي" class="product-img">
+                            <span class="product-tag">موصى به</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">هندسة الصوت</span>
+                            <h3 class="product-title">مايكروفون مكثف احترافي برو-كاست</h3>
+                            <p class="product-desc">مايكروفون استوديو ذو جودة عالية لتسجيل الآلات والأصوات البشرية بدقة فائقة وبأقل مستوى ضجيج ممكن.</p>
+                            <div class="product-footer">
+                                <span class="product-price">190.00</span>
+                                <button class="btn-cart" aria-label="Add to cart" id="add-cart-mic"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Animation Section (Pearson BTEC requirement) -->
+        <section class="animation-section" id="store-promotional-animation">
+            <div class="container animation-container">
+                <div class="animation-text" id="animation-info">
+                    <span class="section-subtitle" style="letter-spacing: 1px;">العرض البصري المبتكر</span>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--text-white);" id="animation-title">تناغم بصرك مع إيقاعك</h2>
+                    <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 25px;" id="animation-desc">
+                        متجر موسيقاتي يوفر تجربة رقمية تفاعلية فريدة. شاهد كيف تتناغم الترددات الصوتية حركياً مع الإيقاعات الموسيقية المختلفة التي تصدرها آلاتنا.
+                    </p>
+                    <a href="offers.html" class="btn btn-secondary" id="animation-btn-explore">شاهد الباقات الموسيقية</a>
+                </div>
+                
+                <div class="animation-visual" id="animation-visualizer-box">
+                    <!-- Floating musical note characters (will float via CSS keyframes) -->
+                    <div class="floating-note"><i class="fa-solid fa-music"></i></div>
+                    <div class="floating-note"><i class="fa-solid fa-guitar"></i></div>
+                    <div class="floating-note"><i class="fa-solid fa-drum"></i></div>
+                    <div class="floating-note"><i class="fa-solid fa-microphone"></i></div>
+                    
+                    <!-- Bouncing Equalizer Bars (CSS animated) -->
+                    <div class="visualizer-bars" id="eq-bars">
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                        <div class="visualizer-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col" id="footer-col-about">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
+                    <span class="logo-text">موسيقاتي</span>
+                </div>
+                <p class="footer-logo-desc">متجر رقمي متخصص في الآلات الموسيقية وهندسة الصوت في الأردن، نسعى لتوفير أرقى الآلات وأفضل جودة صوتية لعشاق الموسيقى.</p>
+                <div class="social-grid">
+                    <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube" id="footer-social-yt"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram" id="footer-social-ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook" id="footer-social-fb"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-btn tiktok" aria-label="TikTok" id="footer-social-tt"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col" id="footer-col-links">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" id="footer-link-home">الصفحة الرئيسية</a></li>
+                    <li><a href="store.html" id="footer-link-store">متجر الآلات</a></li>
+                    <li><a href="gifts.html" id="footer-link-gifts">قسم الهدايا الموسيقية</a></li>
+                    <li><a href="offers.html" id="footer-link-offers">العروض والتخفيضات</a></li>
+                    <li><a href="contact.html" id="footer-link-contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" id="footer-col-contact">
+                <h3>معلومات الاتصال</h3>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item" id="footer-contact-addr">
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>شارع الرينبو، عمان، الأردن</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-ph">
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <span style="font-family: var(--font-english);">+962 7 9000 0000</span>
+                    </div>
+                    <div class="footer-contact-item" id="footer-contact-em">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span style="font-family: var(--font-english);">support@mosiqati.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col" id="footer-col-news">
+                <h3>النشرة الإخبارية</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">اشترك لتصلك آخر أخبار الآلات الجديدة والعروض الحصرية.</p>
+                <form class="newsletter-form" id="newsletter-form-action">
+                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input" required id="newsletter-email-input">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px;" id="newsletter-btn-submit">اشتراك</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p id="copyright-text">جميع الحقوق محفوظة © <span style="font-family: var(--font-english);">2026</span> لموقع موسيقاتي (MOSIQATI)</p>
+            <p style="font-size: 0.75rem; color: #555;" id="btec-disclaimer">مشروع ويب مطور وفقاً لمعايير Pearson BTEC International (المستوى الثاني - الوحدة 7)</p>
+        </div>
+    </footer>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>

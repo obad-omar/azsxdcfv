@@ -3,201 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="مرحباً بكم في متجر موسيقاتي الرقمي - الوجهة الأولى لبيع الآلات الموسيقية الفاخرة ومعدات الصوت في الأردن.">
-    <title>الرئيسية | موسيقاتي - MOSIQATI</title>
-    <!-- CSS Stylesheet -->
+    <meta name="description" content="مرحباً بكم في موسيقاتي - الوجهة الأولى للآلات الموسيقية الفاخرة في الأردن. اكتشف تشكيلة واسعة من الأعواد، الجيتارات، البيانو ومعدات الاستوديو.">
+    <title>الرئيسية | موسيقاتي MOSIQATI</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo" id="nav-logo">
-                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
-                <span class="logo-text">موسيقاتي</span>
-            </a>
-            
-            <nav>
-                <ul class="nav-menu" id="nav-menu-list">
-                    <li><a href="index.html" class="nav-link active" id="link-home">الرئيسية</a></li>
-                    <li><a href="store.html" class="nav-link" id="link-store">المتجر</a></li>
-                    <li><a href="gifts.html" class="nav-link" id="link-gifts">الهدايا</a></li>
-                    <li><a href="offers.html" class="nav-link" id="link-offers">العروض الخاصة</a></li>
-                    <li><a href="contact.html" class="nav-link" id="link-contact">تواصل معنا</a></li>
-                </ul>
-            </nav>
+<!-- ── CUSTOM CURSOR ─────────────────── -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-            <div class="hamburger" id="nav-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+<!-- ── PARTICLE CANVAS ──────────────── -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- ── LOADING SCREEN ───────────────── -->
+<div id="loader">
+    <div class="loader-logo">موسيقاتي</div>
+    <div class="loader-bars">
+        <div class="loader-bar" style="height:30%"></div>
+        <div class="loader-bar" style="height:60%"></div>
+        <div class="loader-bar" style="height:45%"></div>
+        <div class="loader-bar" style="height:80%"></div>
+        <div class="loader-bar" style="height:35%"></div>
+        <div class="loader-bar" style="height:70%"></div>
+        <div class="loader-bar" style="height:55%"></div>
+        <div class="loader-bar" style="height:90%"></div>
+    </div>
+    <div class="loader-progress-track"><div class="loader-progress-bar"></div></div>
+</div>
+
+<!-- ═══════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo" id="nav-logo">
+            <img src="images/logo.jpeg" alt="Mosiqati Logo" style="height: 48px; width: 48px; border-radius: 12px; margin-left: 12px; border: 1px solid var(--cyan); box-shadow: 0 0 12px rgba(0, 229, 255, 0.3); object-fit: cover;">
+            <div>
+                <span class="logo-text-main">موسيقاتي</span>
+                <span class="logo-text-sub">MOSIQATI — Amman, Jordan</span>
+            </div>
+        </a>
+
+        <nav>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html"   class="nav-link active" id="nav-home">الرئيسية</a></li>
+                <li><a href="store.html"   class="nav-link" id="nav-store">المتجر</a></li>
+                <li><a href="gifts.html"   class="nav-link" id="nav-gifts">الهدايا</a></li>
+                <li><a href="offers.html"  class="nav-link" id="nav-offers">العروض</a></li>
+                <li><a href="contact.html" class="nav-link" id="nav-contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn-login-header" data-open-login id="btn-header-login">
+                <i class="fa-solid fa-user"></i> دخول
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="home-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-tagline">أكبر تشكيلة آلات موسيقية في الأردن</span>
-                    <h1 class="hero-title">اكتشف شغفك الموسيقي مع <span>موسيقاتي</span></h1>
-                    <p class="hero-description">متجر رقمي فاخر يوفر أفضل الآلات الشرقية والغربية بالإضافة إلى معدات الاستوديو الاحترافية لتنقل معزوفتك إلى مستوى عالمي.</p>
-                    <div class="btn-group">
-                        <a href="store.html" class="btn btn-primary" id="hero-btn-store">تسوق الآن</a>
-                        <a href="contact.html" class="btn btn-secondary" id="hero-btn-contact">استشر خبيراً</a>
-                    </div>
+<!-- ═══════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero" id="home-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating instrument visual (right side) -->
+    <div class="hero-visual">
+        <img src="images/premium_oud.png" alt="عود فاخر" id="hero-visual-img">
+    </div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-music fa-spin"></i>
+                أفخم متجر موسيقي رقمي في الأردن
+            </div>
+            <h1 class="hero-title">
+                اكتشف شغفك<br>
+                مع <span class="gradient-text">موسيقاتي</span>
+            </h1>
+            <p class="hero-desc">
+                متجر رقمي فاخر يجمع أرقى الآلات الشرقية والغربية مع معدات الاستوديو الاحترافية — تجربة تسوق موسيقية لا مثيل لها.
+            </p>
+            <div class="btn-group">
+                <a href="store.html" class="btn btn-primary" id="hero-cta-store">
+                    <i class="fa-solid fa-store"></i> تسوق الآن
+                </a>
+                <button class="btn btn-secondary" data-open-login id="hero-cta-login">
+                    <i class="fa-solid fa-user-plus"></i> انضم إلينا
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">آلة موسيقية</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">12K+</span>
+                    <span class="stat-label">عميل سعيد</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">8</span>
+                    <span class="stat-label">سنوات خبرة</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Welcome & About Highlights -->
-        <section class="section-padding" id="home-welcome">
-            <div class="container">
-                <div class="section-title-wrapper">
-                    <span class="section-subtitle">من نحن</span>
-                    <h2 class="section-title" id="welcome-heading">نبض النغم في قلب عمان</h2>
-                </div>
-                <div class="grid-3">
-                    <div class="card" id="card-quality">
-                        <div class="card-icon"><i class="fa-solid fa-guitar"></i></div>
-                        <h3 class="card-title">جودة أصلية ومضمونة</h3>
-                        <p class="card-desc">نوفر آلات من كبرى الشركات العالمية والورش العريقة المصممة يدوياً لضمان نقاء الصوت ومتانة الصنع.</p>
-                    </div>
-                    <div class="card" id="card-expert">
-                        <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
-                        <h3 class="card-title">دعم فني واستشارات</h3>
-                        <p class="card-desc">لست متأكداً مما تحتاجه؟ خبراؤنا الموسيقيون في الأردن جاهزون لمساعدتك في اختيار الآلة والمعدات المناسبة.</p>
-                    </div>
-                    <div class="card" id="card-delivery">
-                        <div class="card-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                        <h3 class="card-title">توصيل آمن وسريع</h3>
-                        <p class="card-desc">نقوم بتغليف الآلات بطرق احترافية مضادة للصدمات وتوصيلها مباشرة إلى باب منزلك في جميع محافظات المملكة.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- ═══════════════════════════════════
+     FEATURES / WHY US
+══════════════════════════════════════ -->
+<section class="section-padding" id="home-features">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">لماذا موسيقاتي؟</span>
+            <h2 class="section-title">نبض النغم في قلب عمّان</h2>
+            <p class="section-desc">نوفر تجربة متكاملة لعشاق الموسيقى من الاختيار والمقارنة وحتى التوصيل الآمن لبابك.</p>
+        </div>
+        <div class="grid-3">
 
-        <!-- Dynamic Category Highlights -->
-        <section class="section-padding" style="background: rgba(255,255,255,0.01);" id="home-categories">
-            <div class="container">
-                <div class="section-title-wrapper">
-                    <span class="section-subtitle">تصنيفاتنا</span>
-                    <h2 class="section-title" id="categories-heading">استكشف العوالم الموسيقية</h2>
+            <!-- Fetched Product -->
+            <div class="product-card reveal reveal-delay-1" style="background:var(--bg); border:1px solid rgba(255,255,255,0.05);">
+                <div class="product-img-wrap">
+                    <img src="images/electric_guitar.png" alt="جيتار فيندر ستراتوكاستر" class="product-img" style="object-fit:cover; background:#111;">
+                    <span class="product-tag tag-hot">الأكثر مبيعاً</span>
                 </div>
-                <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-                    
-                    <!-- Category 1 -->
-                    <div class="category-card" id="cat-oriental">
-                        <div class="category-bg" style="background-image: url('images/premium_oud.png');"></div>
-                        <div class="category-content">
-                            <h3 class="category-title">الآلات الشرقية</h3>
-                            <a href="store.html" class="category-link">عرض المجموعة <i class="fa-solid fa-arrow-left"></i></a>
+                <div class="product-info">
+                    <span class="product-cat">آلات وترية</span>
+                    <h3 class="product-name" style="font-size:1.15rem;">جيتار فيندر ستراتوكاستر</h3>
+                    <div class="product-footer">
+                        <div class="price-wrap">
+                            <span class="price-new" style="color:var(--gold); font-weight:bold;">850.00 د.أ</span>
                         </div>
+                        <a href="store.html" class="btn-cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
-
-                    <!-- Category 2 -->
-                    <div class="category-card" id="cat-guitars">
-                        <div class="category-bg" style="background-image: url('images/electric_guitar.png');"></div>
-                        <div class="category-content">
-                            <h3 class="category-title">الجيتارات والوتريات</h3>
-                            <a href="store.html" class="category-link">عرض المجموعة <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </div>
+        
+            <!-- Fetched Product -->
+            <div class="product-card reveal reveal-delay-2" style="background:var(--bg); border:1px solid rgba(255,255,255,0.05);">
+                <div class="product-img-wrap">
+                    <img src="images/grand_piano.png" alt="بيانو كاسيو AP-270" class="product-img" style="object-fit:cover; background:#111;">
+                    <span class="product-tag tag-premium">مميز</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-cat">آلات الكيبورد</span>
+                    <h3 class="product-name" style="font-size:1.15rem;">بيانو كاسيو AP-270</h3>
+                    <div class="product-footer">
+                        <div class="price-wrap">
+                            <span class="price-new" style="color:var(--gold); font-weight:bold;">650.00 د.أ</span>
                         </div>
+                        <a href="store.html" class="btn-cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
-
-                    <!-- Category 3 -->
-                    <div class="category-card" id="cat-pianos">
-                        <div class="category-bg" style="background-image: url('images/grand_piano.png');"></div>
-                        <div class="category-content">
-                            <h3 class="category-title">آلات الكيبورد</h3>
-                            <a href="store.html" class="category-link">عرض المجموعة <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </div>
+        
+            <!-- Fetched Product -->
+            <div class="product-card reveal reveal-delay-3" style="background:var(--bg); border:1px solid rgba(255,255,255,0.05);">
+                <div class="product-img-wrap">
+                    <img src="images/premium_oud.png" alt="عود تركي احترافي" class="product-img" style="object-fit:cover; background:#111;">
+                    <span class="product-tag tag-new">جديد</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-cat">آلات وترية</span>
+                    <h3 class="product-name" style="font-size:1.15rem;">عود تركي احترافي</h3>
+                    <div class="product-footer">
+                        <div class="price-wrap">
+                            <span class="price-new" style="color:var(--gold); font-weight:bold;">350.00 د.أ</span>
                         </div>
+                        <a href="store.html" class="btn-cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
-
                 </div>
             </div>
-        </section>
+        
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+            <a href="store.html" class="btn btn-outline-gold">تصفح جميع المنتجات <i class="fa-solid fa-arrow-left" style="margin-right:8px;"></i></a>
+        </div>
+    </div>
+</section>
 
-        <!-- Brand New Promotional Banner Section -->
-        <section class="section-padding" style="position: relative; overflow: hidden;" id="home-promo">
-            <div class="container">
-                <div class="card" style="background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(0,229,255,0.15)); border: 1px solid var(--primary-gold); padding: 60px 40px; text-align: center; border-radius: 30px;" id="promo-banner-container">
-                    <h2 style="font-size: 2.2rem; margin-bottom: 15px; color: var(--text-white);" id="promo-banner-title">احتفالية انطلاق متجر موسيقاتي الرقمي الجديد!</h2>
-                    <p style="color: var(--text-gray); font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px auto; line-height: 1.8;" id="promo-banner-desc">
-                        يسعدنا تقديم خصم خاص يصل إلى <span style="color: var(--accent-cyan); font-weight: 700; font-family: var(--font-english);">20%</span> على جميع معدات الاستوديو، بالإضافة إلى عروض حصرية على الأعواد المصممة يدوياً.
-                    </p>
-                    <a href="offers.html" class="btn btn-primary" id="promo-banner-btn">اكتشف العروض الحصرية</a>
+<!-- ═══════════════════════════════════
+     PROMO BANNER
+══════════════════════════════════════ -->
+<section class="section-padding" id="home-promo">
+    <div class="container">
+        <div class="promo-banner reveal" id="promo-banner">
+            <div style="font-size:3rem;margin-bottom:16px;">🎊</div>
+            <h2 class="promo-banner-title">احتفالية إطلاق موسيقاتي الرقمي!</h2>
+            <p class="promo-banner-desc">
+                خصومات تصل إلى <span style="color:var(--cyan);font-weight:800;font-family:var(--font-en);">20%</span> على معدات الاستوديو وعروض حصرية على الأعواد المصنوعة يدوياً لفترة محدودة.
+            </p>
+            <a href="offers.html" class="btn btn-primary" id="promo-btn">
+                <i class="fa-solid fa-bolt"></i> اكتشف العروض الحصرية
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col" id="footer-brand">
+                <a href="index.html" class="logo" style="margin-bottom:0;">
+                    <img src="images/logo.jpeg" alt="Mosiqati Logo" style="height: 48px; width: 48px; border-radius: 12px; margin-left: 12px; border: 1px solid var(--cyan); box-shadow: 0 0 12px rgba(0, 229, 255, 0.3); object-fit: cover;">
+                    <span class="logo-text-main">موسيقاتي</span>
+                </a>
+                <p class="footer-desc">متجر رقمي فاخر متخصص في الآلات الموسيقية ومعدات الاستوديو، يعمل من قلب عمّان ليصل إلى كل عاشق للموسيقى.</p>
+                <div class="social-row">
+                    <a href="#" class="social-btn yt" aria-label="YouTube" id="footer-yt"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="social-btn ig" aria-label="Instagram" id="footer-ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn fb" aria-label="Facebook" id="footer-fb"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-btn tt" aria-label="TikTok" id="footer-tt"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col" id="footer-col-about">
-                <div class="logo">
-                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
-                    <span class="logo-text">موسيقاتي</span>
-                </div>
-                <p class="footer-logo-desc">متجر رقمي متخصص في الآلات الموسيقية وهندسة الصوت في الأردن، نسعى لتوفير أرقى الآلات وأفضل جودة صوتية لعشاق الموسيقى.</p>
-                <div class="social-grid">
-                    <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube" id="footer-social-yt"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram" id="footer-social-ig"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook" id="footer-social-fb"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://tiktok.com" target="_blank" class="social-btn tiktok" aria-label="TikTok" id="footer-social-tt"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col" id="footer-col-links">
-                <h3>روابط سريعة</h3>
+            <div class="footer-col" id="footer-links-col">
+                <h4>روابط سريعة</h4>
                 <ul class="footer-links">
-                    <li><a href="index.html" id="footer-link-home">الصفحة الرئيسية</a></li>
-                    <li><a href="store.html" id="footer-link-store">متجر الآلات</a></li>
-                    <li><a href="gifts.html" id="footer-link-gifts">قسم الهدايا الموسيقية</a></li>
-                    <li><a href="offers.html" id="footer-link-offers">العروض والتخفيضات</a></li>
-                    <li><a href="contact.html" id="footer-link-contact">تواصل معنا</a></li>
+                    <li><a href="index.html" id="fl-home">الرئيسية</a></li>
+                    <li><a href="store.html" id="fl-store">المتجر</a></li>
+                    <li><a href="gifts.html" id="fl-gifts">الهدايا</a></li>
+                    <li><a href="offers.html" id="fl-offers">العروض الخاصة</a></li>
+                    <li><a href="contact.html" id="fl-contact">تواصل معنا</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col" id="footer-col-contact">
-                <h3>معلومات الاتصال</h3>
-                <div class="footer-contact-info">
-                    <div class="footer-contact-item" id="footer-contact-addr">
-                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-                        <span>شارع الرينبو، عمان، الأردن</span>
-                    </div>
-                    <div class="footer-contact-item" id="footer-contact-ph">
-                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
-                        <span style="font-family: var(--font-english);">+962 7 9000 0000</span>
-                    </div>
-                    <div class="footer-contact-item" id="footer-contact-em">
-                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                        <span style="font-family: var(--font-english);">support@mosiqati.com</span>
-                    </div>
+            <div class="footer-col" id="footer-contact-col">
+                <h4>معلومات الاتصال</h4>
+                <div class="footer-contact-items">
+                    <div class="footer-contact-item" id="fc-addr"><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span>شارع الرينبو، جبل عمان، الأردن</span></div>
+                    <div class="footer-contact-item" id="fc-phone"><span class="icon"><i class="fa-solid fa-phone"></i></span><span style="font-family:var(--font-en);direction:ltr">+962 7 9000 0000</span></div>
+                    <div class="footer-contact-item" id="fc-email"><span class="icon"><i class="fa-solid fa-envelope"></i></span><span style="font-family:var(--font-en)">support@mosiqati.com</span></div>
                 </div>
             </div>
-
-            <div class="footer-col" id="footer-col-news">
-                <h3>النشرة الإخبارية</h3>
-                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">اشترك لتصلك آخر أخبار الآلات الجديدة والعروض الحصرية.</p>
-                <form class="newsletter-form" id="newsletter-form-action">
-                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input" required id="newsletter-email-input">
-                    <button type="submit" class="btn btn-primary" style="padding: 10px;" id="newsletter-btn-submit">اشتراك</button>
+            <div class="footer-col" id="footer-news-col">
+                <h4>النشرة الإخبارية</h4>
+                <p style="color:var(--gray);font-size:0.88rem;margin-bottom:14px;line-height:1.7;">اشترك لتصلك أحدث عروضنا وإطلاقات الآلات الجديدة أولاً.</p>
+                <form class="newsletter-wrap" id="newsletter-form">
+                    <input type="email" placeholder="بريدك الإلكتروني..." class="newsletter-input" id="newsletter-input" required>
+                    <button type="submit" class="btn btn-primary" style="padding:11px;" id="newsletter-submit">اشتراك</button>
                 </form>
             </div>
         </div>
-
-        <div class="container footer-bottom">
-            <p id="copyright-text">جميع الحقوق محفوظة © <span style="font-family: var(--font-english);">2026</span> لموقع موسيقاتي (MOSIQATI)</p>
-            <p style="font-size: 0.75rem; color: #555;" id="btec-disclaimer">مشروع ويب مطور وفقاً لمعايير Pearson BTEC International (المستوى الثاني - الوحدة 7)</p>
+        <div class="footer-bottom">
+            <span id="copyright">© <span style="font-family:var(--font-en)">2026</span> موسيقاتي (MOSIQATI) — جميع الحقوق محفوظة</span>
+            <span style="font-size:0.75rem;color:var(--gray-dim);" id="btec-credit">Pearson BTEC International — Level 2 — Unit 7: Website Development</span>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- App JS -->
-    <script src="js/app.js"></script>
+<!-- ═══════════════════════════════════
+     LOGIN MODAL
+══════════════════════════════════════ -->
+<div class="modal-overlay" id="login-modal-overlay">
+    <div class="login-modal" role="dialog" aria-modal="true" aria-label="تسجيل الدخول">
+        <div class="login-modal-glow"></div>
+        <div class="login-modal-glow-cyan"></div>
+
+        <button class="modal-close" data-close-modal aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+
+        <div class="login-header">
+            <img src="images/logo.jpeg" alt="Logo" style="height: 64px; width: 64px; border-radius: 50%; border: 2px solid var(--cyan); margin: 0 auto 15px auto; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); object-fit: cover; display: block;">
+            <h2 class="login-title">أهلاً بك في موسيقاتي</h2>
+            <p class="login-sub">سجّل دخولك أو أنشئ حساباً جديداً</p>
+        </div>
+
+        <div class="login-body">
+            <!-- Tabs -->
+            <div class="login-tabs">
+                <button class="login-tab active" data-tab="login" id="tab-login">تسجيل الدخول</button>
+                <button class="login-tab" data-tab="register" id="tab-register">حساب جديد</button>
+            </div>
+
+            <!-- LOGIN PANEL -->
+            <div id="login-panel">
+                <form id="login-form" autocomplete="off">
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                        <input type="email" class="login-input" placeholder="البريد الإلكتروني" required id="login-email" autocomplete="email">
+                    </div>
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" class="login-input" placeholder="كلمة المرور" required id="login-password" autocomplete="current-password">
+                    </div>
+                    <div class="login-options">
+                        <label class="remember-wrap">
+                            <input type="checkbox" id="login-remember"> تذكّرني
+                        </label>
+                        <a href="#" class="forgot-link" id="forgot-link">نسيت كلمة المرور؟</a>
+                    </div>
+                    <button type="submit" class="btn-login-submit" id="login-submit-btn">
+                        <i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول
+                    </button>
+                    <div class="login-divider">أو تسجيل الدخول بواسطة</div>
+                    <div class="social-login-row">
+                        <button type="button" class="btn-social-login" id="google-login"><i class="fa-brands fa-google"></i> Google</button>
+                        <button type="button" class="btn-social-login" id="facebook-login"><i class="fa-brands fa-facebook"></i> Facebook</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- REGISTER PANEL -->
+            <div id="register-panel" style="display:none;">
+                <form id="register-form" autocomplete="off">
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" class="login-input" placeholder="الاسم الكامل" required id="reg-name" autocomplete="name">
+                    </div>
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                        <input type="email" class="login-input" placeholder="البريد الإلكتروني" required id="reg-email" autocomplete="email">
+                    </div>
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" class="login-input" placeholder="كلمة المرور (8 أحرف+)" required id="reg-password" autocomplete="new-password">
+                    </div>
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" class="login-input" placeholder="تأكيد كلمة المرور" required id="reg-confirm" autocomplete="new-password">
+                    </div>
+                    <button type="submit" class="btn-login-submit" id="reg-submit-btn" style="margin-top:8px;">
+                        <i class="fa-solid fa-user-plus"></i> إنشاء حساب
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── JS ─────────────────────────────── -->
+<script src="js/app.js"></script>
 </body>
 </html>

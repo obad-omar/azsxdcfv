@@ -3,245 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="تواصل مع فريق الدعم الفني والمستشارين الموسيقيين في متجر موسيقاتي. تفضل بزيارتنا في عمان أو أرسل استفسارك مباشرة.">
-    <title>تواصل معنا | موسيقاتي - MOSIQATI</title>
-    <!-- CSS Stylesheet -->
+    <meta name="description" content="تواصل مع فريق موسيقاتي — نموذج اتصال ذكي، خريطة الموقع، ووسائل التواصل الاجتماعي للمتجر.">
+    <title>تواصل معنا | موسيقاتي MOSIQATI</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="particleCanvas"></canvas>
+<div id="loader">
+    <div class="loader-logo">تواصل</div>
+    <div class="loader-bars">
+        <div class="loader-bar" style="height:45%"></div><div class="loader-bar" style="height:75%"></div>
+        <div class="loader-bar" style="height:55%"></div><div class="loader-bar" style="height:90%"></div>
+        <div class="loader-bar" style="height:30%"></div><div class="loader-bar" style="height:70%"></div>
+        <div class="loader-bar" style="height:50%"></div><div class="loader-bar" style="height:85%"></div>
+    </div>
+    <div class="loader-progress-track"><div class="loader-progress-bar"></div></div>
+</div>
 
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo" id="nav-logo">
-                <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
-                <span class="logo-text">موسيقاتي</span>
-            </a>
-            
-            <nav>
-                <ul class="nav-menu" id="nav-menu-list">
-                    <li><a href="index.html" class="nav-link" id="link-home">الرئيسية</a></li>
-                    <li><a href="store.html" class="nav-link" id="link-store">المتجر</a></li>
-                    <li><a href="gifts.html" class="nav-link" id="link-gifts">الهدايا</a></li>
-                    <li><a href="offers.html" class="nav-link" id="link-offers">العروض الخاصة</a></li>
-                    <li><a href="contact.html" class="nav-link active" id="link-contact">تواصل معنا</a></li>
-                </ul>
-            </nav>
-
-            <div class="hamburger" id="nav-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- Contact Page Header -->
-        <section class="section-padding" style="padding-bottom: 20px;" id="contact-intro">
-            <div class="container">
-                <div class="section-title-wrapper">
-                    <span class="section-subtitle">اتصل بنا</span>
-                    <h1 class="section-title" id="contact-heading">يسعدنا دائماً سماع صوتك</h1>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Form & Info Grid -->
-        <section style="padding-bottom: 80px;" id="contact-details-form">
-            <div class="container">
-                <div class="contact-wrapper" id="contact-panel-wrapper">
-                    
-                    <!-- Left: Info Cards & Map -->
-                    <div class="contact-info-panel" id="contact-left-col">
-                        
-                        <!-- Card 1: Address -->
-                        <div class="contact-info-card" id="info-card-address">
-                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <div class="info-details">
-                                <h4>موقع المعرض</h4>
-                                <p>شارع الرينبو، جبل عمان، العاصمة عمان، الأردن</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 2: Phone -->
-                        <div class="contact-info-card" id="info-card-phone">
-                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div class="info-details">
-                                <h4>اتصل بنا مباشرة</h4>
-                                <p style="font-family: var(--font-english); direction: ltr; text-align: right;">+962 7 9000 0000</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: Email -->
-                        <div class="contact-info-card" id="info-card-email">
-                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div class="info-details">
-                                <h4>الدعم الفني والمبيعات</h4>
-                                <p style="font-family: var(--font-english);">support@mosiqati.com</p>
-                            </div>
-                        </div>
-
-                        <!-- Vector Map Mockup -->
-                        <div class="map-mockup" id="vector-map-container">
-                            <svg width="100%" height="100%" viewBox="0 0 400 250" style="background:#0c0c14; display:block;">
-                                <!-- Grid Lines representing roads -->
-                                <path d="M 20 50 L 380 50" stroke="#1c1c28" stroke-width="12" fill="none" />
-                                <path d="M 50 20 L 50 230" stroke="#1c1c28" stroke-width="12" fill="none" />
-                                <path d="M 200 20 L 200 230" stroke="#1c1c28" stroke-width="16" fill="none" />
-                                <path d="M 20 180 L 380 180" stroke="#1c1c28" stroke-width="14" fill="none" />
-                                
-                                <!-- Rainbow Street Route Highlight -->
-                                <path d="M 50 120 L 350 120" stroke="#252538" stroke-width="18" fill="none" />
-                                <text x="210" y="112" fill="#d4af37" font-family="'Cairo', sans-serif" font-size="9" font-weight="bold">شارع الرينبو - Rainbow St.</text>
-
-                                <!-- Landmark Icons -->
-                                <circle cx="200" cy="120" r="14" fill="rgba(0, 229, 255, 0.2)" />
-                                <circle cx="200" cy="120" r="6" fill="#00e5ff" />
-                                <text x="180" y="98" fill="#fff" font-family="'Cairo', sans-serif" font-size="10" font-weight="bold">موقع موسيقاتي</text>
-                                
-                                <rect x="30" y="30" width="30" height="20" rx="3" fill="#151522" stroke="#252538" />
-                                <text x="35" y="43" fill="#666" font-size="8">سينما</text>
-                                
-                                <rect x="310" y="160" width="40" height="30" rx="3" fill="#151522" stroke="#252538" />
-                                <text x="318" y="178" fill="#666" font-size="8">مقهى</text>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <!-- Right: Contact Form -->
-                    <div class="contact-form-container" id="contact-right-col">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 25px;" id="form-heading">أرسل استفسارك وسنتصل بك</h3>
-                        
-                        <form id="contact-form">
-                            <!-- Name -->
-                            <div class="form-group" id="group-name">
-                                <label for="name" class="form-label">الاسم الكامل <span style="color: var(--accent-cyan);">*</span></label>
-                                <input type="text" id="name" class="form-control" placeholder="اسمك الثنائي أو الثلاثي">
-                                <span class="validation-msg" id="err-name">الرجاء إدخال الاسم</span>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="form-group" id="group-email">
-                                <label for="email" class="form-label">البريد الإلكتروني <span style="color: var(--accent-cyan);">*</span></label>
-                                <input type="email" id="email" class="form-control" placeholder="example@domain.com" style="direction: ltr; text-align: right;">
-                                <span class="validation-msg" id="err-email">الرجاء إدخال بريد إلكتروني صحيح</span>
-                            </div>
-
-                            <!-- Phone -->
-                            <div class="form-group" id="group-phone">
-                                <label for="phone" class="form-label">رقم الهاتف <span style="color: var(--accent-cyan);">*</span></label>
-                                <input type="tel" id="phone" class="form-control" placeholder="0790000000" style="direction: ltr; text-align: right;">
-                                <span class="validation-msg" id="err-phone">الرجاء إدخال رقم هاتف أردني صحيح</span>
-                            </div>
-
-                            <!-- Preferred Instrument Dropdown -->
-                            <div class="form-group" id="group-interest">
-                                <label for="interest" class="form-label">الآلة الموسيقية المهتم بها</label>
-                                <select id="interest" class="form-control" style="background:#0f0f18;">
-                                    <option value="none">اختر من القائمة...</option>
-                                    <option value="oud">العود الشرقي</option>
-                                    <option value="guitar">الجيتار الكهربائي / الكلاسيكي</option>
-                                    <option value="piano">البيانو الكلاسيكي</option>
-                                    <option value="darbuka">الدربكة الإيقاعية</option>
-                                    <option value="studio">معدات الاستوديو والتسجيل</option>
-                                </select>
-                            </div>
-
-                            <!-- Message Body -->
-                            <div class="form-group" id="group-message">
-                                <label for="message" class="form-label">تفاصيل رسالتك <span style="color: var(--accent-cyan);">*</span></label>
-                                <textarea id="message" class="form-control" placeholder="اكتب تفاصيل استفسارك أو طلبك الخاص هنا..."></textarea>
-                                <span class="validation-msg" id="err-message">الرجاء كتابة رسالتك بوضوح</span>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" class="btn btn-primary" style="width:100%; padding:15px;" id="btn-submit-form">إرسال الرسالة <i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i></button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Custom POPUP Modal Overlay Confirmation (BTEC interactive feedback) -->
-    <div class="modal-overlay" id="success-modal">
-        <div class="modal-box">
-            <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
-            <h2 class="modal-title" id="modal-success-title">تم الإرسال بنجاح!</h2>
-            <p class="modal-message" id="modal-success-desc">
-                شكراً لتواصلك مع متجر **موسيقاتي**. لقد تم استلام استفسارك بنجاح، وسيقوم أحد خبرائنا الموسيقيين بمراجعة طلبك والتواصل معك خلال 24 ساعة عمل.
-            </p>
-            <button class="btn btn-primary" style="padding:10px 30px;" id="close-modal">حسناً، فهمت</button>
+<!-- HEADER -->
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo"><img src="images/logo.jpeg" alt="Mosiqati Logo" style="height: 48px; width: 48px; border-radius: 12px; margin-left: 12px; border: 1px solid var(--cyan); box-shadow: 0 0 12px rgba(0, 229, 255, 0.3); object-fit: cover;"><div><span class="logo-text-main">موسيقاتي</span><span class="logo-text-sub">MOSIQATI — Amman, Jordan</span></div></a>
+        <nav><ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+            <li><a href="store.html" class="nav-link">المتجر</a></li>
+            <li><a href="gifts.html" class="nav-link">الهدايا</a></li>
+            <li><a href="offers.html" class="nav-link">العروض</a></li>
+            <li><a href="contact.html" class="nav-link active">تواصل معنا</a></li>
+        </ul></nav>
+        <div class="nav-actions">
+            <button class="btn-login-header" data-open-login><i class="fa-solid fa-user"></i> دخول</button>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </div>
+</header>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col" id="footer-col-about">
-                <div class="logo">
-                    <span class="logo-icon"><i class="fa-solid fa-music"></i></span>
-                    <span class="logo-text">موسيقاتي</span>
-                </div>
-                <p class="footer-logo-desc">متجر رقمي متخصص في الآلات الموسيقية وهندسة الصوت في الأردن، نسعى لتوفير أرقى الآلات وأفضل جودة صوتية لعشاق الموسيقى.</p>
-                <div class="social-grid">
-                    <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube" id="footer-social-yt"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram" id="footer-social-ig"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook" id="footer-social-fb"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://tiktok.com" target="_blank" class="social-btn tiktok" aria-label="TikTok" id="footer-social-tt"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-col" id="footer-col-links">
-                <h3>روابط سريعة</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html" id="footer-link-home">الصفحة الرئيسية</a></li>
-                    <li><a href="store.html" id="footer-link-store">متجر الآلات</a></li>
-                    <li><a href="gifts.html" id="footer-link-gifts">قسم الهدايا الموسيقية</a></li>
-                    <li><a href="offers.html" id="footer-link-offers">العروض والتخفيضات</a></li>
-                    <li><a href="contact.html" id="footer-link-contact">تواصل معنا</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col" id="footer-col-contact">
-                <h3>معلومات الاتصال</h3>
-                <div class="footer-contact-info">
-                    <div class="footer-contact-item" id="footer-contact-addr">
-                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-                        <span>شارع الرينبو، عمان، الأردن</span>
-                    </div>
-                    <div class="footer-contact-item" id="footer-contact-ph">
-                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
-                        <span style="font-family: var(--font-english);">+962 7 9000 0000</span>
-                    </div>
-                    <div class="footer-contact-item" id="footer-contact-em">
-                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                        <span style="font-family: var(--font-english);">support@mosiqati.com</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-col" id="footer-col-news">
-                <h3>النشرة الإخبارية</h3>
-                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">اشترك لتصلك آخر أخبار الآلات الجديدة والعروض الحصرية.</p>
-                <form class="newsletter-form" id="newsletter-form-action">
-                    <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input" required id="newsletter-email-input">
-                    <button type="submit" class="btn btn-primary" style="padding: 10px;" id="newsletter-btn-submit">اشتراك</button>
-                </form>
+<main>
+    <!-- INTRO -->
+    <section class="section-sm" id="contact-intro">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">📬 اتصل بنا</span>
+                <h1 class="section-title">يسعدنا دائماً سماع صوتك</h1>
+                <p class="section-desc">سواء كان سؤالاً عن آلة، استشارة تقنية، أو طلباً خاصاً — فريقنا جاهز للرد خلال 24 ساعة.</p>
             </div>
         </div>
+    </section>
 
-        <div class="container footer-bottom">
-            <p id="copyright-text">جميع الحقوق محفوظة © <span style="font-family: var(--font-english);">2026</span> لموقع موسيقاتي (MOSIQATI)</p>
-            <p style="font-size: 0.75rem; color: #555;" id="btec-disclaimer">مشروع ويب مطور وفقاً لمعايير Pearson BTEC International (المستوى الثاني - الوحدة 7)</p>
+    <!-- CONTACT GRID -->
+    <section style="padding-bottom:90px;" id="contact-main">
+        <div class="container">
+            <div class="contact-grid" id="contact-layout">
+
+                <!-- LEFT PANEL: Info + Map + Social -->
+                <div class="contact-info-stack reveal" id="contact-info-col">
+
+                    <div class="info-card" id="info-addr">
+                        <div class="info-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <p class="info-label">موقع المعرض</p>
+                            <p class="info-value">شارع الرينبو، جبل عمان، عمّان — الأردن</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" id="info-phone">
+                        <div class="info-icon-wrap"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <p class="info-label">اتصل بنا مباشرة</p>
+                            <p class="info-value" style="font-family:var(--font-en);direction:ltr">+962 7 9000 0000</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" id="info-email">
+                        <div class="info-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <p class="info-label">الدعم الفني والمبيعات</p>
+                            <p class="info-value" style="font-family:var(--font-en)">support@mosiqati.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" id="info-hours">
+                        <div class="info-icon-wrap" style="background:rgba(212,175,55,0.08);color:var(--gold);"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <p class="info-label">ساعات العمل</p>
+                            <p class="info-value">السبت – الخميس: 10 ص – 10 م</p>
+                        </div>
+                    </div>
+
+                    <!-- SVG MAP MOCKUP -->
+                    <div class="map-box" id="map-mockup">
+                        <svg width="100%" height="230" viewBox="0 0 420 230" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="420" height="230" fill="#07070f"/>
+                            <!-- Road grid -->
+                            <rect x="0" y="55" width="420" height="14" fill="#111120"/>
+                            <rect x="0" y="130" width="420" height="18" fill="#111120"/>
+                            <rect x="0" y="185" width="420" height="12" fill="#111120"/>
+                            <rect x="60" y="0" width="14" height="230" fill="#111120"/>
+                            <rect x="200" y="0" width="18" height="230" fill="#111120"/>
+                            <rect x="340" y="0" width="12" height="230" fill="#111120"/>
+                            <!-- Rainbow Street label -->
+                            <text x="105" y="124" fill="#d4af37" font-family="Cairo, sans-serif" font-size="9" font-weight="700">شارع الرينبو — Rainbow Street</text>
+                            <!-- Pin location -->
+                            <circle cx="209" cy="139" r="16" fill="rgba(0,229,255,0.15)"/>
+                            <circle cx="209" cy="139" r="7" fill="#00e5ff"/>
+                            <circle cx="209" cy="139" r="14" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.5">
+                                <animateTransform attributeName="transform" type="rotate" from="0 209 139" to="360 209 139" dur="4s" repeatCount="indefinite"/>
+                            </circle>
+                            <!-- Label -->
+                            <text x="225" y="128" fill="#ffffff" font-family="Cairo, sans-serif" font-size="10" font-weight="700">موسيقاتي</text>
+                            <text x="225" y="141" fill="#9090a8" font-family="sans-serif" font-size="8">MOSIQATI</text>
+                            <!-- Nearby buildings -->
+                            <rect x="75" y="30" width="35" height="22" rx="3" fill="#111120" stroke="#1a1a30" stroke-width="1"/>
+                            <text x="83" y="44" fill="#4a4a6a" font-size="7" font-family="sans-serif">مبنى</text>
+                            <rect x="310" y="150" width="45" height="28" rx="3" fill="#111120" stroke="#1a1a30" stroke-width="1"/>
+                            <text x="318" y="167" fill="#4a4a6a" font-size="7" font-family="sans-serif">مقهى</text>
+                            <rect x="80" y="160" width="40" height="20" rx="3" fill="#111120" stroke="#1a1a30" stroke-width="1"/>
+                            <text x="88" y="173" fill="#4a4a6a" font-size="7" font-family="sans-serif">محل</text>
+                        </svg>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div id="contact-social">
+                        <p style="color:var(--gray);font-size:0.88rem;margin-bottom:12px;">تابعنا على وسائل التواصل الاجتماعي</p>
+                        <div class="social-row">
+                            <a href="https://youtube.com" target="_blank" class="social-btn yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://instagram.com" target="_blank" class="social-btn ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://facebook.com" target="_blank" class="social-btn fb" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://tiktok.com" target="_blank" class="social-btn tt" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT PANEL: Contact Form -->
+                <div class="contact-form-card reveal" id="contact-form-col">
+                    <h3 style="font-size:1.5rem;margin-bottom:28px;" id="form-title">أرسل استفسارك وسنتصل بك</h3>
+                    <form id="contact-form" novalidate>
+
+                        <div class="form-row" id="group-name">
+                            <label class="form-label" for="name">الاسم الكامل <span class="form-required">*</span></label>
+                            <input type="text" id="name" class="form-input" placeholder="اسمك الثنائي أو الثلاثي" autocomplete="name">
+                            <span class="err-msg" id="err-name"></span>
+                        </div>
+
+                        <div class="form-row" id="group-email">
+                            <label class="form-label" for="email">البريد الإلكتروني <span class="form-required">*</span></label>
+                            <input type="email" id="email" class="form-input" placeholder="example@domain.com" style="direction:ltr;text-align:right;" autocomplete="email">
+                            <span class="err-msg" id="err-email"></span>
+                        </div>
+
+                        <div class="form-row" id="group-phone">
+                            <label class="form-label" for="phone">رقم الهاتف <span class="form-required">*</span></label>
+                            <input type="tel" id="phone" class="form-input" placeholder="0790000000" style="direction:ltr;text-align:right;" autocomplete="tel">
+                            <span class="err-msg" id="err-phone"></span>
+                        </div>
+
+                        <div class="form-row" id="group-interest">
+                            <label class="form-label" for="interest">الآلة الموسيقية المهتم بها</label>
+                            <select id="interest" class="form-input" style="background:#0a0a16;">
+                                <option value="">اختر من القائمة...</option>
+                                <option value="oud">🪕 العود الشرقي</option>
+                                <option value="guitar">🎸 الجيتار الكهربائي / الكلاسيكي</option>
+                                <option value="piano">🎹 البيانو الكلاسيكي</option>
+                                <option value="darbuka">🥁 الدربكة الإيقاعية</option>
+                                <option value="studio">🎛️ معدات الاستوديو</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row" id="group-message">
+                            <label class="form-label" for="message">تفاصيل رسالتك <span class="form-required">*</span></label>
+                            <textarea id="message" class="form-input" placeholder="اكتب استفسارك أو طلبك الخاص هنا..."></textarea>
+                            <span class="err-msg" id="err-message"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%;padding:15px;font-size:1.05rem;" id="contact-submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+
+            </div>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <!-- App JS -->
-    <script src="js/app.js"></script>
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="success-modal">
+    <div class="success-modal">
+        <div style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:200px;height:200px;background:radial-gradient(circle,rgba(212,175,55,0.15),transparent 70%);pointer-events:none;"></div>
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h2 class="success-title" id="success-title">تم الإرسال بنجاح!</h2>
+        <p class="success-msg" id="success-msg">شكراً لتواصلك معنا في موسيقاتي. سيتواصل معك أحد خبرائنا الموسيقيين خلال 24 ساعة عمل لمساعدتك.</p>
+        <button class="btn btn-primary" style="padding:12px 32px;" id="close-modal-btn">حسناً، فهمت ✓</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><a href="index.html" class="logo" style="margin-bottom:0;"><img src="images/logo.jpeg" alt="Mosiqati Logo" style="height: 48px; width: 48px; border-radius: 12px; margin-left: 12px; border: 1px solid var(--cyan); box-shadow: 0 0 12px rgba(0, 229, 255, 0.3); object-fit: cover;"><span class="logo-text-main">موسيقاتي</span></a><p class="footer-desc">متجر رقمي فاخر متخصص في الآلات الموسيقية ومعدات الاستوديو من قلب عمّان.</p><div class="social-row"><a href="#" class="social-btn yt"><i class="fa-brands fa-youtube"></i></a><a href="#" class="social-btn ig"><i class="fa-brands fa-instagram"></i></a><a href="#" class="social-btn fb"><i class="fa-brands fa-facebook"></i></a><a href="#" class="social-btn tt"><i class="fa-brands fa-tiktok"></i></a></div></div>
+            <div class="footer-col"><h4>روابط سريعة</h4><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="store.html">المتجر</a></li><li><a href="gifts.html">الهدايا</a></li><li><a href="offers.html">العروض</a></li><li><a href="contact.html">تواصل معنا</a></li></ul></div>
+            <div class="footer-col"><h4>معلومات الاتصال</h4><div class="footer-contact-items"><div class="footer-contact-item"><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span>شارع الرينبو، عمان، الأردن</span></div><div class="footer-contact-item"><span class="icon"><i class="fa-solid fa-phone"></i></span><span style="font-family:var(--font-en);direction:ltr">+962 7 9000 0000</span></div><div class="footer-contact-item"><span class="icon"><i class="fa-solid fa-envelope"></i></span><span style="font-family:var(--font-en)">support@mosiqati.com</span></div></div></div>
+            <div class="footer-col"><h4>النشرة الإخبارية</h4><p style="color:var(--gray);font-size:0.88rem;margin-bottom:14px;line-height:1.7;">اشترك لتصلك أحدث عروضنا وإطلاقات الآلات.</p><form class="newsletter-wrap"><input type="email" placeholder="بريدك الإلكتروني..." class="newsletter-input" required><button type="submit" class="btn btn-primary" style="padding:11px;">اشتراك</button></form></div>
+        </div>
+        <div class="footer-bottom"><span>© <span style="font-family:var(--font-en)">2026</span> موسيقاتي — جميع الحقوق محفوظة</span><span style="font-size:0.75rem;color:var(--gray-dim);">Pearson BTEC International — Level 2 — Unit 7</span></div>
+    </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="login-modal-overlay">
+    <div class="login-modal">
+        <div class="login-modal-glow"></div><div class="login-modal-glow-cyan"></div>
+        <button class="modal-close" data-close-modal><i class="fa-solid fa-xmark"></i></button>
+        <div class="login-header"><img src="images/logo.jpeg" alt="Logo" style="height: 64px; width: 64px; border-radius: 50%; border: 2px solid var(--cyan); margin: 0 auto 15px auto; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); object-fit: cover; display: block;"><h2 class="login-title">أهلاً بك في موسيقاتي</h2><p class="login-sub">سجّل دخولك أو أنشئ حساباً جديداً</p></div>
+        <div class="login-body">
+            <div class="login-tabs"><button class="login-tab active" data-tab="login">تسجيل الدخول</button><button class="login-tab" data-tab="register">حساب جديد</button></div>
+            <div id="login-panel"><form id="login-form"><div class="input-icon-wrap"><i class="fa-solid fa-envelope input-icon"></i><input type="email" class="login-input" placeholder="البريد الإلكتروني" required></div><div class="input-icon-wrap"><i class="fa-solid fa-lock input-icon"></i><input type="password" class="login-input" placeholder="كلمة المرور" required></div><div class="login-options"><label class="remember-wrap"><input type="checkbox"> تذكّرني</label><a href="#" class="forgot-link">نسيت كلمة المرور؟</a></div><button type="submit" class="btn-login-submit"><i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول</button><div class="login-divider">أو تسجيل الدخول بواسطة</div><div class="social-login-row"><button type="button" class="btn-social-login"><i class="fa-brands fa-google"></i> Google</button><button type="button" class="btn-social-login"><i class="fa-brands fa-facebook"></i> Facebook</button></div></form></div>
+            <div id="register-panel" style="display:none;"><form id="register-form"><div class="input-icon-wrap"><i class="fa-solid fa-user input-icon"></i><input type="text" class="login-input" placeholder="الاسم الكامل" required></div><div class="input-icon-wrap"><i class="fa-solid fa-envelope input-icon"></i><input type="email" class="login-input" placeholder="البريد الإلكتروني" required></div><div class="input-icon-wrap"><i class="fa-solid fa-lock input-icon"></i><input type="password" class="login-input" placeholder="كلمة المرور" required></div><div class="input-icon-wrap"><i class="fa-solid fa-lock input-icon"></i><input type="password" class="login-input" placeholder="تأكيد كلمة المرور" required></div><button type="submit" class="btn-login-submit" style="margin-top:8px;"><i class="fa-solid fa-user-plus"></i> إنشاء حساب</button></form></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
 </body>
 </html>
